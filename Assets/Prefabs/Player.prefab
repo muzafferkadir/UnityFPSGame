@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 114392351364418300}
   - component: {fileID: 114166005762054038}
   - component: {fileID: 1291121420054538264}
+  - component: {fileID: 5090524411707094912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -172,6 +173,7 @@ MonoBehaviour:
   - {fileID: 114392351364418300}
   - {fileID: 839233462100339285}
   - {fileID: 2006370722718085567}
+  - {fileID: 5090524411707094912}
 --- !u!114 &114166005762054038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,6 +208,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2373120610bd57d48825171286c1016a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5090524411707094912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925818753264521070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88171d3a49e2b145a4cebaa81c43ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpawn: {fileID: 1967779276948198137}
+  bulletPrefab: {fileID: 1189118957112323277, guid: 2a3f2734a48e54e4fbbf25665a989587,
+    type: 3}
+  bulletSpeed: 10
+  gunFirePartical: {fileID: 8191001599028689690}
 --- !u!1 &1336330276618771036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5095,6 +5114,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.00000011920929, z: 0}
+--- !u!1 &4597637509494300088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967779276948198137}
+  m_Layer: 0
+  m_Name: Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1967779276948198137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597637509494300088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6109125135800215450}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5919343315999457903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,6 +5345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3475441100568333417}
+  - {fileID: 1967779276948198137}
   m_Father: {fileID: 4122432915499757638}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
