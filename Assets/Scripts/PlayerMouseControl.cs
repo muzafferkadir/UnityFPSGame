@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PlayerMouseControl : MonoBehaviour
+using UnityEngine.Networking;
+public class PlayerMouseControl : NetworkBehaviour
 {
     public float mouseSensivity = 100f;
     public Transform playerBody;

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 114714533852163170}
   - component: {fileID: 143901459731148646}
   - component: {fileID: 114392351364418300}
+  - component: {fileID: 114166005762054038}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -165,6 +166,33 @@ MonoBehaviour:
   jumpSpeed: 1.6
   speed: 6
   gravity: 9.81
+  componentsToDisable:
+  - {fileID: 3220524352588193582}
+  - {fileID: 114392351364418300}
+  - {fileID: 839233462100339285}
+  - {fileID: 2006370722718085567}
+--- !u!114 &114166005762054038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925818753264521070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 4
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!1 &1336330276618771036
 GameObject:
   m_ObjectHideFlags: 0
