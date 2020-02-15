@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 114166005762054038}
   - component: {fileID: 1291121420054538264}
   - component: {fileID: 5090524411707094912}
+  - component: {fileID: 114698002387844308}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -225,6 +226,26 @@ MonoBehaviour:
     type: 3}
   bulletSpeed: 10
   gunFirePartical: {fileID: 8191001599028689690}
+--- !u!114 &114698002387844308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925818753264521070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1267208747, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 6109125135800215450}
+  m_ChildIndex: 0
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_MovementThreshold: 0.001
+  m_InterpolateRotation: 0.5
+  m_InterpolateMovement: 0.5
 --- !u!1 &1336330276618771036
 GameObject:
   m_ObjectHideFlags: 0
@@ -5138,7 +5159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4597637509494300088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.325}
+  m_LocalPosition: {x: 0, y: 0, z: 0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6109125135800215450}
@@ -5231,7 +5252,7 @@ BoxCollider:
   m_GameObject: {fileID: 5919343315999457903}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

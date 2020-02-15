@@ -21,6 +21,7 @@ public class PlayerFire : NetworkBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.transform.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
+        bullet.GetComponent<BulletCollison>().FiredFrom = gameObject;
         NetworkServer.Spawn(bullet);
         Destroy(bullet, 2);
     }
