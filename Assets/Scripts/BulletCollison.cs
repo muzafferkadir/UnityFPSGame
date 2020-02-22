@@ -5,16 +5,32 @@ using UnityEngine;
 public class BulletCollison : MonoBehaviour
 {
     public GameObject FiredFrom;
+    private bool isColliding;
     void Start()
     {
         transform.Rotate(-90f, 0, 0);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (FiredFrom == collision.gameObject) return;//player can't kill ourself
+        if (isColliding) return;//this is for collision work one time
+        isColliding = true;
+
+        if (FiredFrom == collision.gameObject) return; //player can't kill ourself
         Destroy(gameObject);
-        string log = collision.gameObject.GetInstanceID() + " - " + FiredFrom.GetInstanceID();
-        Debug.Log(log);
-        Debug.Log(collision.gameObject.name);
+        PlayerHealth health = collision.gameObject.GetComponent<PlayerHealth>();
+        if (health != null)
+        {
+            health.TakeDamage(30);
+            Debug.Log(health.currentHealth);
+            if (health.currentHealth <= 0)
+            {
+                Debug.Log("ÖLDÜ");
+            }
+        }
+        //string log = collision.gameObject.GetInstanceID() + " - " + FiredFrom.GetInstanceID();
+    }
+    private void Update()
+    {
+        isColliding = false;
     }
 }
