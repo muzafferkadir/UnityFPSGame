@@ -19,10 +19,26 @@ public class PlayerFire : NetworkBehaviour
     [Command]
     private void CmdFire()
     {
+        RpcStartParticles();
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.transform.rotation);
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
         bullet.GetComponent<BulletCollison>().FiredFrom = gameObject;
         NetworkServer.Spawn(bullet);
         Destroy(bullet, 2);
+    }
+    [ClientRpc]
+    public void RpcStartParticles()
+    {
+        DoStartParticles();
+    }
+
+    public void DoStartParticles()
+    {
+        gunFirePartical.Play();
+        if (gunFirePartical.isPlaying)
+        {
+            gunFirePartical.Stop();
+            gunFirePartical.Play();
+        }
     }
 }
