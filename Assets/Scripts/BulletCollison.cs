@@ -25,6 +25,7 @@ public class BulletCollison : MonoBehaviour
             if (health.currentHealth <= 0)
             {
                 Debug.Log("ÖLDÜ");
+                collision.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
             }
         }
         //string log = collision.gameObject.GetInstanceID() + " - " + FiredFrom.GetInstanceID();
